@@ -3,8 +3,8 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="C:\Users\Sarthak\Documents\Confidential\Sarthak's Stuff\Home Stuff\Programming\Web Design\bootstrap-3.3.6-dist\css\bootstrap.css">
-    <link rel="stylesheet" href="C:\Users\Sarthak\Documents\Confidential\Sarthak's Stuff\Home Stuff\Programming\Sublime Text\WebDev\Financial App\css\stylesheet.css">
+    <link rel="stylesheet" href="resources/bootstrap/bootstrap-3.3.6-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="resources/css/stylesheet.css">
 </head>
 
 <body>
@@ -20,13 +20,13 @@
         </div>
         <div id="header-right" class="headerText-right">
             <div id="headerRightTab">
-                <a href="home_page.html" style="color:#ffffff"><h3>About</h3></a>
+                <a href="/home" style="color:#ffffff"><h3>About</h3></a>
             </div>
             <div id="headerRightTab">
-                <a href="log_in_page.html" style="color:#ffffff"><h3>Log In</h3></a>
+                <a href="/login" style="color:#ffffff"><h3>Log In</h3></a>
             </div>
             <div id="headerRightTab">
-                <a href="sign_up_page.html" style="color:#ffffff"><h3>Sign Up</h3></a>
+                <a href="/signup" style="color:#ffffff"><h3>Sign Up</h3></a>
             </div>
         </div>
     </div>
