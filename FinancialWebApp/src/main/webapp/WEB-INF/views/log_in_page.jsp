@@ -31,24 +31,24 @@
         </div>
     </div>
     <div class="container" id="myBodyForm">
-        <div id="form_right">
-            <button type="button" name="button">Sign in With Google</button>
-        </div>
-        <div id="form_left">
-            <h4 style="margin-left: -150px">Enter Username</h4>
-            <input type="text" name="UN_Field" value="">
-            <br>
-            <br>
-            <h4 style="margin-left: -150px">Enter Password</h4>
-            <input type="password" name="PW_Field" value="">
-            <br>
-            <br>
-            <br>
-            <button type="button" name="button" style="margin-left: 200px; margin-bottom: 10px;">Submit</button>
-
-        </div>
-        <div class="line" id="verticalLine" style="height: 200px; margin-left:50%"></div>
-
+    	<form id="signin" action="/signin">
+		<div id="form_right">
+            		<button type="button" name="button">Sign in With Google</button>
+        	</div>
+        	<div id="form_left">
+            		<h4 style="margin-left: -150px">Enter Username:</h4>
+            		<input type="text" name="UN_Field" value="" placeholder="Username">
+            		<br>
+            		<br>
+            		<h4 style="margin-left: -150px">Enter Password:</h4>
+            		<input type="password" name="PW_Field" value="" placeholder="Password">
+            		<br>
+            		<br>
+            		<br>
+            		<input type="submit" name="button" style="margin-left: 200px; margin-bottom: 10px;">
+		</div>
+        	<div class="line" id="verticalLine" style="height: 200px; margin-left:50%"></div>
+        </form>
     </div>
 
 
