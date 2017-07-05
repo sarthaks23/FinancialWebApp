@@ -44,6 +44,7 @@
             		<input type="password" name="PW_Field" value="" placeholder="Password">
             		<br>
             		<br>
+			<h4 style="color: #F44336">${errorMessage}<h4>
             		<br>
             		<input type="submit" name="button" style="margin-left: 200px; margin-bottom: 10px;">
 		</div>
