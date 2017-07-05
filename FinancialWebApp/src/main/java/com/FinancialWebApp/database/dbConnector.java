@@ -7,20 +7,29 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class dbConnector {
-	public String duplicateUsername(String s) {
-		try {
-			Connection connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/financialwebapp?useSSL=false", "financialwebapp", "financialwebapp");
-			Statement statement = connection.createStatement();
-			ResultSet resultset = statement.executeQuery("SELECT * FROM users WHERE username = '" + s + "';");
-			if (resultset.isBeforeFirst()) {
-				return "true";
-			} else {
-				return "false";
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return "error";
+	
+	private static Statement db() throws SQLException{
+		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/financialwebapp?useSSL=false",
+				"financialwebapp", "financialwebapp");
+		Statement statement = connection.createStatement();
+		return statement;
+	}
+	
+	public static boolean usernameInDb(String s) throws SQLException {
+		ResultSet resultset = db().executeQuery("SELECT * FROM users WHERE username = '" + s + "';");
+		if (resultset.isBeforeFirst()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public static boolean passwordValid(String username, String password) throws SQLException{
+		ResultSet resultset = db().executeQuery("SELECT password FROM users WHERE username = '" + username + "';");
+		if(password.equals(resultset.getString(2))){
+			return true;
+		}else{
+			return false;
 		}
 	}
 }

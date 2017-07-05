@@ -33,7 +33,7 @@
 		</div>
 	</div>
 	<div class="container" id="myBodyForm">
-		<form id="login" action="/createuser" method="post">
+		<form id="login" action="/signup" method="post">
 			<div id="form_right_SI">
 				<h4>Enter Zipcode</h4>
 				<br> <input type="text" name="ZIP" value=""
