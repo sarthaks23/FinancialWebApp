@@ -32,4 +32,9 @@ public class dbConnector {
 			return false;
 		}
 	}
+	
+	public static int getZipcode(String username) throws SQLException{
+		ResultSet resultSet = db().executeQuery("SELECT zip FROM users WHERE username = '" + username + "';");
+		return resultSet.getInt(3);
+	}
 }
