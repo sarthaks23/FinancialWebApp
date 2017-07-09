@@ -16,3 +16,4 @@ FinancialWebApp/.gitignore
 FinancialWebApp/.project
 FinancialWebApp/.settings/
 RemoteSystemsTempFiles/.project
+.recommenders/

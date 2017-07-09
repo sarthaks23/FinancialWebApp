@@ -31,7 +31,7 @@
         </div>
     </div>
     <div class="container" id="myBodyForm">
-    	<form id="signin" action="/signin">
+    	<form id="login" action="/login" method="post">
 		<div id="form_right">
             		<button type="button" name="button">Sign in With Google</button>
         	</div>
