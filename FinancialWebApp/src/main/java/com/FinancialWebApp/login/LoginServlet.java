@@ -19,7 +19,7 @@ public class LoginServlet extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/views/log_in_page.jsp").forward(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		String username = request.getParameter("UN_Field");
 		String password = request.getParameter("PW_Field");
 		try {
@@ -30,11 +30,12 @@ public class LoginServlet extends HttpServlet {
 					response.sendRedirect("/home");
 				}else{
 					request.setAttribute("errorMessage", "Username or password is invalid");
-					request.getRequestDispatcher("/WEB-INF/views/log_in_page.jsp");
+					request.getRequestDispatcher("/WEB-INF/views/log_in_page.jsp").forward(request, response);
 				}
 			}
-		} catch (SQLException e) {
+		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			request.setAttribute("errorMessage", "There was an error with our website");
+			request.getRequestDispatcher("/WEB-INF/views/log_in_page.jsp").forward(request, response);;
 			e.printStackTrace();
 		}
 	}

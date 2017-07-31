@@ -27,7 +27,7 @@ public class SignupServlet extends HttpServlet{
 			}else if(dbConnector.usernameInDb(request.getParameter("UN_Field"))){
 				response.sendRedirect("/signup");
 			}
-		} catch (SQLException e) {
+		} catch (SQLException | InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
